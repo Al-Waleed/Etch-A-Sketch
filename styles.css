@@ -1,0 +1,56 @@
+* {
+    color: rgb(204, 226, 245);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    font-size: 20px;
+}
+body{
+    display: flex;
+    justify-content: space-around;
+    padding: 36px;
+}
+.container {
+    background-color: white;
+    height: 544px;
+    width: 544px;
+}
+.gridSelector,
+.backColorSelector,
+.brushColorSelector,
+.cleanUp,
+.rainbow {
+    margin: 16px 0;
+}
+
+.backColorInput {
+    margin-left: 12px;
+}
+
+.button {
+    background-color: #405cf5;
+    border-radius: 6px;
+    border-width: 0;
+    cursor: pointer;
+    height: 36px;
+    margin: 12px 0 0;
+    padding: 0 25px;
+}
+
+.backColorInput,
+.gridInput {
+    border-radius: 6px;
+    background-color: #405cf5;
+    border-width: 0;
+    padding: 0 8px;
+    cursor: pointer;
+
+
+}
+
+.colorInput {
+    border-radius: 6px;
+    border-color: rgb(204, 226, 245);
+    cursor: pointer;
+
+}
+  
