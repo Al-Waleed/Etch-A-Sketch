@@ -8,30 +8,30 @@
 </head>
 <body>
     <div class="settings">
-        <div>
+        <div class="gridSelector">
             <label class="selector" for="grids">Select the number of squares: </label>
-            <select name="" id="grids">
-                <option value="">16 x 16</option>
-                <option value="">32 x 32</option>
-                <option value="">64 x 64</option>
-                <option value="">80 x 80</option>
-                <option value="">100 x 100</option>
+            <select class="gridInput" name="" id="grids">
+                <option value="0" selected></option>
+                <option value="16">16 x 16</option>
+                <option value="32">32 x 32</option>
+                <option value="64">64 x 64</option>
+                <option value="80">80 x 80</option>
+                <option value="100">100 x 100</option>
             </select>
         </div>
-        <div>
+        <div class="backColorSelector">
             <label for="background-color">Select sketch background color: </label>
-            <select class="selector" name="" id="background-color">
+            <select class="backColorInput" name="" id="background-color">
                 <option value="white">white</option>
-                <option value="black">black</option>
                 <option value="blue">Blue</option>
                 <option value="red">Red</option>
                 <option value="yellow">Yellow</option>
             </select>
 
         </div>
-        <div>
+        <div class="brushColorSelector">
             <label for="brushColor">Select brush color: </label>
-            <input class="selector" type="color" name="" id="brushColor" value="#0000ff">
+            <input class="colorInput" type="color" name="" id="brushColor" value="#000000">
         </div>
         <button class="rainbow button">Toggle rainbow mode</button>
         <div class="cleanUp">
@@ -41,7 +41,7 @@
 
     </div>
 
-    <div class="container">
+    <div id="container">
     </div>
 
 </body>
