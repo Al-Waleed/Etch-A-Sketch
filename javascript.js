@@ -17,7 +17,7 @@ function createGrids(grid){
 
 
 function paint(e) {
-    e.target.style.backgroundColor = 'blue';
+    e.target.style.backgroundColor = paintColor;
     };
 //const isClicked = document.getElementById(#grid)///////continue here
 //if (isClicked === true){
@@ -31,7 +31,6 @@ function paint(e) {
 //});
 
 const backgroundColor = document.querySelector("#backgroundColor");
-
 backgroundColor.addEventListener("change", () => {
     container.innerHTML = "";
     createGrids(getGridsValue.value);
@@ -39,8 +38,11 @@ backgroundColor.addEventListener("change", () => {
 });
 
 const clearBtn = document.querySelector(".clear");
-
 clearBtn.addEventListener("click", () => { // clear btn that empties the container and adds the chosen num of grids to it
     container.innerHTML = "";
     createGrids(getGridsValue.value);
 });
+
+let paintColor = "black"
+const brushColor = document.getElementById("brushColor");
+brushColor.addEventListener("change", () => paintColor = brushColor.value);
