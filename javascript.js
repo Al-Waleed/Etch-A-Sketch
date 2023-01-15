@@ -10,12 +10,14 @@ function createGrids(grid){
     for (i = 0; i < (grid * grid); i++){
         let div = document.createElement("div");
         container.appendChild(div).className = "grid";
+
         div.addEventListener("click", paint);
     };
 };
 
+
 function paint(e) {
-    e.target.style.backgroundColor = 'red';
+    e.target.style.backgroundColor = 'blue';
     };
 //const isClicked = document.getElementById(#grid)///////continue here
 //if (isClicked === true){
@@ -27,6 +29,16 @@ function paint(e) {
 //    console.log(event.target);
 //    //event.target.style.backgroundColor = "red";
 //});
+
+const backgroundColor = document.querySelector("#backgroundColor");
+
+function changeBackgroundColor(color){
+    container.innerHTML = "";
+    createGrids(getGridsValue.value);
+    container.style.setProperty("--backgroundColor", color);   
+}//^^ change the color of the container 
+
+backgroundColor.addEventListener("change", () => changeBackgroundColor(backgroundColor.value));
 
 const clearBtn = document.querySelector(".clear");
 

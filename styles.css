@@ -1,6 +1,7 @@
 :root {
     --grid-cols: 1;
     --grid-rows: 1;
+    --backgroundColor: white;
   }
 * {
     color: rgb(204, 226, 245);
@@ -23,7 +24,7 @@ body{
 }
 
 .grid {
-    background-color: green;
+    background-color: var(--backgroundColor);
 }
 
 
