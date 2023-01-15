@@ -32,13 +32,11 @@ function paint(e) {
 
 const backgroundColor = document.querySelector("#backgroundColor");
 
-function changeBackgroundColor(color){
+backgroundColor.addEventListener("change", () => {
     container.innerHTML = "";
     createGrids(getGridsValue.value);
-    container.style.setProperty("--backgroundColor", color);   
-}//^^ change the color of the container 
-
-backgroundColor.addEventListener("change", () => changeBackgroundColor(backgroundColor.value));
+    container.style.setProperty("--backgroundColor", backgroundColor.value);   
+});
 
 const clearBtn = document.querySelector(".clear");
 
