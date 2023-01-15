@@ -17,22 +17,24 @@ function createGrids(grid){
 let rainbowClicked = false;
 
 function paint(e) {
-    if(rainbowClicked === false){
-        e.target.style.backgroundColor = paintColor;
-    }else if (rainbowClicked === true){
-        e.target.style.backgroundColor = rainbowColors[Math.floor(Math.random() * 6)];
+    if (brushClicked === true){
+
+        if(rainbowClicked === false){
+            e.target.style.backgroundColor = paintColor;
+        }else if (rainbowClicked === true){
+            e.target.style.backgroundColor = rainbowColors[Math.floor(Math.random() * 6)];
+        }
     }
     };
-//const isClicked = document.getElementById(#grid)///////continue here
-//if (isClicked === true){
-//
-//};
+ 
+let brushClicked = false; 
+container.addEventListener("mousedown", () => {
+    brushClicked = true; 
+})
 
-//container.addEventListener("onmousedown", function onclick(event) {
-//    container.addEventListener("mouseover", () => { event.target.style.backgroundColor = "red" })
-//    console.log(event.target);
-//    //event.target.style.backgroundColor = "red";
-//});
+container.addEventListener("mouseup", () => {
+    brushClicked = false; 
+})
 
 const backgroundColor = document.querySelector("#backgroundColor");
 backgroundColor.addEventListener("change", () => {
