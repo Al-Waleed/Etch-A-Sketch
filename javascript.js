@@ -11,7 +11,7 @@ function createGrids(grid){
         let div = document.createElement("div");
         container.appendChild(div).className = "grid";
 
-        div.addEventListener("click", paint);
+        div.addEventListener("mouseover", paint);
     };
 };
 
@@ -46,3 +46,7 @@ clearBtn.addEventListener("click", () => { // clear btn that empties the contain
 let paintColor = "black"
 const brushColor = document.getElementById("brushColor");
 brushColor.addEventListener("change", () => paintColor = brushColor.value);
+
+
+const eraser = document.querySelector(".eraser")
+eraser.addEventListener("click", () => paintColor = backgroundColor.value);
