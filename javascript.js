@@ -14,10 +14,14 @@ function createGrids(grid){
         div.addEventListener("mouseover", paint);
     };
 };
-
+let rainbowClicked = false;
 
 function paint(e) {
-    e.target.style.backgroundColor = paintColor;
+    if(rainbowClicked === false){
+        e.target.style.backgroundColor = paintColor;
+    }else if (rainbowClicked === true){
+        e.target.style.backgroundColor = rainbowColors[Math.floor(Math.random() * 6)];
+    }
     };
 //const isClicked = document.getElementById(#grid)///////continue here
 //if (isClicked === true){
@@ -45,8 +49,21 @@ clearBtn.addEventListener("click", () => { // clear btn that empties the contain
 
 let paintColor = "black"
 const brushColor = document.getElementById("brushColor");
-brushColor.addEventListener("change", () => paintColor = brushColor.value);
+brushColor.addEventListener("change", () => {
+    paintColor = brushColor.value;
+    rainbowClicked = false; // to turn off rainbow mode if it was clicked
+});
 
 
 const eraser = document.querySelector(".eraser")
-eraser.addEventListener("click", () => paintColor = backgroundColor.value);
+eraser.addEventListener("click", () => { 
+    rainbowClicked = false; // to turn off rainbow mode if it was clicked
+    paintColor = backgroundColor.value
+});
+
+const rainbow = document.querySelector(".rainbow");
+rainbow.addEventListener("click", () => paintColor = rainbowClicked = true);// to turn on rainbow mode when clicked
+
+const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "Violet"]
+
+
